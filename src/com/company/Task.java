@@ -1,6 +1,8 @@
 package com.company;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 
 public class Task implements Callable <RowColumn>{
 
@@ -21,6 +23,7 @@ public class Task implements Callable <RowColumn>{
 
     private RowColumn searchNumber(int row[], int number, int position) throws InterruptedException{
         for (int i = 0; i < row.length; i++) {
+            TimeUnit.MILLISECONDS.sleep(ThreadLocalRandom.current().nextInt(500)+501);
             if(row[i] == number) {
                 return new RowColumn(position, i);
             }

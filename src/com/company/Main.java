@@ -13,7 +13,7 @@ public class Main {
         List<Future<Integer>> futureList;
         List<Task> taskList = new ArrayList<>();
         int matrice[][] = new int[5][5];
-        int numberSearch = ThreadLocalRandom.current().nextInt(11) + 1;
+        int numberSearch = ThreadLocalRandom.current().nextInt(20) + 1;
 
         for (int i = 0; i < matrice.length; i++) {
             for (int j = 0; j < matrice[i].length; j++) {
